@@ -30,7 +30,7 @@ Create a basic content block as follow.
     </div>
 </div>
 ```
-Add your own CSS styles to the news ticker.
+Add your own CSS styles.
 ``` css
 .vscroller {
     border: 1px solid gray;
