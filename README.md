@@ -82,7 +82,7 @@ Add your own CSS styles to the news ticker.
     background: #ccc;
 }
 ```
-Call the plugin to start the news ticker.
+Call the plugin to create scrollbar.
 ``` javascript
 $('.vscroller').vscroller();
 
