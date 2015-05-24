@@ -1,0 +1,67 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 15px;
+    background: url(http://subtlepatterns.com/patterns/stardust.png);
+    
+    color: white;
+}
+
+a {
+    color: limegreen;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+}
+
+a:focus,
+a:hover {
+    color: lime;
+    text-shadow: 0 0 8px lime;
+    text-decoration: none;
+    outline: none;
+}
+
+.vscroller-content h3:first-child {
+    margin-top: 0;
+}
+
+.vscroller {
+    margin-bottom: 15px;
+}
+
+/* advanced theme */
+
+.vscroller.advanced .vscroller-content {
+    margin-right: 5px;
+}
+
+.vscroller.advanced .vscroller-scroll-body {
+    right: 5px;
+    top: 5px;
+    background: #626262;
+    width: 10px;
+    border-radius: 8px;
+    opacity: 1;
+    transition: none;
+    -webkit-transition: none;
+}
+
+.vscroller.advanced .vscroller-scroll {
+    left: -1px;
+    background: silver;
+    width: 12px;
+    border-radius: 8px;
+    transition: box-shadow 0.25s, background-color 0.25s;
+    -webkit-transition: box-shadow 0.25s, background-color 0.25s;
+}
+
+.vscroller.advanced .vscroller-scroll:hover,
+.vscroller.advanced.vscroller-drag .vscroller-scroll {
+    -webkit-box-shadow: 0 2px 8px 0 rgba(255,255,255,0.5);
+    box-shadow: 0 2px 8px 0 rgba(255,255,255,0.5);
+}
+
+.vscroller.advanced .vscroller-scroll:focus {
+    background: yellow;
+    -webkit-box-shadow: 0 2px 8px 0 yellow;
+    box-shadow: 0 2px 8px 0 yellow;
+}
