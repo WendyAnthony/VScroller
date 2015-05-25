@@ -11,12 +11,12 @@ How to use it:
 <script src="jquery.vscroller.js"></script>
 <link href="jquery.vscroller.css" rel="stylesheet">
 ```
-Add OPTIONAL mouse wheel support.
+2. Add OPTIONAL mouse wheel support.
 ``` html
 <script src="jquery.mousewheel.min.js"></script>
 ```
 
-Wrap your content into a scrollable container.
+3. Wrap your content into a scrollable container.
 ``` html
 <div class="vscroller">
   <div class="vscroller-content">
@@ -25,12 +25,12 @@ Wrap your content into a scrollable container.
 </div>
 ```
 
-Enable the plugin.
+4. Enable the plugin.
 ``` javascript
 $('.vscroller').vscroller();
 ```
 
-Default plugin options.
+5. Default plugin options.
 ``` javascript
 
 $('.vscroller').vscroller({
