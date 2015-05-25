@@ -1,103 +1,51 @@
 jQuery VScroller
 ===================
-VScroller is a really small jQuery vertical scroller plugin with support for "jquery.mousewheel", "jquery.event.drag" and "jquery.easing".
+VScroller is a jQuery plugin that makes your long content scrollable with a custom vertical scrollbar, featuring smooth scroll, scrolling momentum, easing, mouse wheel and touch support.
 
 How to use it:
 -------------
-Load jquery,event.drag and the jQuery vscroller plugin in your html page.
+1. Load the jQuery VScroller plugin and other required resources in the document.
 ``` html
 <script src="jquery.min.js"></script>
-<script src="jquery.event.drag.js"></script>
+<script src="jquery.event.drag.min.js"></script>
 <script src="jquery.vscroller.js"></script>
+<link href="jquery.vscroller.css" rel="stylesheet">
 ```
-Load the optional jQuery mousewheel plugin for mouse wheel support.
+Add OPTIONAL mouse wheel support.
 ``` html
 <script src="jquery.mousewheel.min.js"></script>
 ```
 
-Create a basic content block as follow.
+Wrap your content into a scrollable container.
 ``` html
 <div class="vscroller">
-    <div class="vscroller-content">
-        <h3>Lorem ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, enim, voluptate veritatis aut sunt dicta officiis nulla cumque magnam alias qui rem doloremque! Molestias?</p>
-        <h3>Lorem ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, enim, voluptate veritatis aut sunt dicta officiis nulla cumque magnam alias qui rem doloremque! Molestias?</p>
-        <h3>Lorem ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, enim, voluptate veritatis aut sunt dicta officiis nulla cumque magnam alias qui rem doloremque! Molestias?</p>
-        <h3>Lorem ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, enim, voluptate veritatis aut sunt dicta officiis nulla cumque magnam alias qui rem doloremque! Molestias?</p>
-    </div>
+  <div class="vscroller-content">
+    Content goes here
+  </div>
 </div>
 ```
-Add your own CSS styles.
-``` css
-.vscroller {
-    border: 1px solid gray;
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
-    height: 224px;
-}
 
-.vscroller-content {
-    position: relative;
-    padding: 15px;
-    margin-right: 5px;
-}
-
-.vscroller-scroll-body {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background: #666;
-    width: 10px;
-    border-radius: 8px;
-    opacity: 0.5;
-    transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
-}
-
-.vscroller-drag .vscroller-scroll-body,
-.vscroller-scroll-body:hover {
-    opacity: 1;
-}
-
-.vscroller-scroll {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #999;
-    width: 10px;
-    height: 45px;
-    border-radius: 8px;
-    transition: background-color 0.25s;
-    -webkit-transition: background-color 0.25s;
-    z-index: 99;
-    cursor: pointer;
-}
-
-.vscroller-scroll:focus {
-    background: #ccc;
-}
-```
-Call the plugin to create scrollbar.
+Enable the plugin.
 ``` javascript
 $('.vscroller').vscroller();
-
 ```
-Default settings.
+
+Default plugin options.
 ``` javascript
 
 $('.vscroller').vscroller({
-    // mousewheel support
-    mousewheel: false,
-    // easing function
-    easing: 'linear',
-    // mousewheel and keyboard arrows offset pixel count
-    scrollRate: 15,
-    // scrolling animation duration
-    animationDuration: 400
+
+// enable jQuery mousewheel support
+mousewheel: false,
+
+// extra easing function
+easing: 'linear',
+
+// mousewheel and keyboard arrows offset pixel count
+scrollRate: 15,
+
+// animation duration
+animationDuration: 400
+
 });
 ```
