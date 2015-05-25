@@ -4,19 +4,19 @@ VScroller is a jQuery plugin that makes your long content scrollable with a cust
 
 How to use it:
 -------------
-1. Load the jQuery VScroller plugin and other required resources in the document.
+Load the jQuery VScroller plugin and other required resources in the document.
 ``` html
 <script src="jquery.min.js"></script>
 <script src="jquery.event.drag.min.js"></script>
 <script src="jquery.vscroller.js"></script>
 <link href="jquery.vscroller.css" rel="stylesheet">
 ```
-2. Add OPTIONAL mouse wheel support.
+Add OPTIONAL mouse wheel support.
 ``` html
 <script src="jquery.mousewheel.min.js"></script>
 ```
 
-3. Wrap your content into a scrollable container.
+Wrap your content into a scrollable container.
 ``` html
 <div class="vscroller">
   <div class="vscroller-content">
@@ -25,12 +25,12 @@ How to use it:
 </div>
 ```
 
-4. Enable the plugin.
+Enable the plugin.
 ``` javascript
 $('.vscroller').vscroller();
 ```
 
-5. Default plugin options.
+Default plugin options.
 ``` javascript
 
 $('.vscroller').vscroller({
