@@ -1,5 +1,5 @@
 /*
- * jQuery VScroller v1.0
+ * jQuery VScroller v1.1
  * Created by Nxeed | https://github.com/nxeed
  */
 
@@ -59,6 +59,19 @@ if (typeof Object.create !== "function") {
 
             return ret;
         },
+        checkVisible: function () {
+            if (this.contentHeight > this.height) {
+                this.$scrollBody.show();
+                return true;
+            }
+            this.$scrollBody.hide();
+            return false;
+        },
+        refreshContentSize: function () {
+            this.contentHeight = this.$content.outerHeight();
+            this.redraw();
+            this.checkVisible();
+        },
         init: function (options, el) {
             var base = this;
             this.options = $.extend({}, $.fn.vscroller.options, $(el).data(), options);
@@ -86,20 +99,11 @@ if (typeof Object.create !== "function") {
 
             var scrollStart = 0;
 
-            var check = function () {
-                if (base.contentHeight > base.height) {
-                    base.$scrollBody.show();
-                    return true;
-                }
-                base.$scrollBody.hide();
-                return false;
-            };
-
-            $(window).bind('resize.vscroller', function () {
-                base.contentHeight = base.$content.outerHeight();
-                base.redraw();
-                check();
-            });
+            $(window).bind('resize.vscroller', this.refreshContentSize);
+            
+            setInterval(function() {
+               base.refreshContentSize();
+            }, 1000);
 
             this.$scrollBody.bind('mousedown.vscroller', function (e) {
                 if (e.button !== 0) {
@@ -151,18 +155,19 @@ if (typeof Object.create !== "function") {
 
             if (this.options.mousewheel) {
                 this.$elem.bind('mousewheel.vscroller', function (e) {
-                    if (!check()) {
+                    if (!base.checkVisible()) {
                         return;
                     }
                     var jump = base.options.scrollRate;
                     base.scrollPos = (e.deltaY > 0) ? base.scrollPos - jump : base.scrollPos + jump;
+                    
                     if (base.redraw()) {
                         e.preventDefault();
                     }
                 });
             }
 
-            check();
+            this.checkVisible();
         }
     };
 
@@ -180,7 +185,7 @@ if (typeof Object.create !== "function") {
     };
 
     $.fn.vscroller.options = {
-        mousewheel: false,
+        mousewheel: true,
         easing: 'linear',
         scrollRate: 15,
         animationDuration: 400

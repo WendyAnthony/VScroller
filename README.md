@@ -9,11 +9,13 @@ Load the jQuery VScroller plugin and other required resources in the document.
 <script src="jquery.min.js"></script>
 <script src="jquery.event.drag.min.js"></script>
 <script src="jquery.vscroller.js"></script>
+<script src="jquery.mousewheel.min.js"></script>
 <link href="jquery.vscroller.css" rel="stylesheet">
 ```
-Add OPTIONAL mouse wheel support.
+
+Add OPTIONAL custom easing functions support.
 ``` html
-<script src="jquery.mousewheel.min.js"></script>
+<script src="jquery.easing.min.js"></script>
 ```
 
 Wrap your content into a scrollable container.
@@ -36,7 +38,7 @@ Default plugin options.
 $('.vscroller').vscroller({
 
 // enable jQuery mousewheel support
-mousewheel: false,
+mousewheel: true,
 
 // extra easing function
 easing: 'linear',
