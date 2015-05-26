@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vscroller by nxeed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Vscroller</h1>
+      <h2 class="project-tagline">Smooth Vertical Scroller Plugin with jQuery</h2>
+      <a href="https://github.com/nxeed/VScroller" class="btn">View on GitHub</a>
+      <a href="https://github.com/nxeed/VScroller/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nxeed/VScroller/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="jquery-vscroller" class="anchor" href="#jquery-vscroller" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery VScroller</h1>
+
+<p>VScroller is a jQuery plugin that makes your long content scrollable with a custom vertical scrollbar, featuring smooth scroll, scrolling momentum, easing, mouse wheel and touch support.</p>
+
+<h2>
+<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use it:</h2>
+
+<p>Load the jQuery VScroller plugin and other required resources in the document.</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.event.drag.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.vscroller.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.mousewheel.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.vscroller.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<p>Add OPTIONAL custom easing functions support.</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.easing.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Wrap your content into a scrollable container.</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>vscroller<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>vscroller-content<span class="pl-pds">"</span></span>&gt;
+    Content goes here
+  &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>Enable the plugin.</p>
+
+<div class="highlight highlight-javascript"><pre>$(<span class="pl-s"><span class="pl-pds">'</span>.vscroller<span class="pl-pds">'</span></span>).vscroller();</pre></div>
+
+<p>Default plugin options.</p>
+
+<div class="highlight highlight-javascript"><pre>
+$(<span class="pl-s"><span class="pl-pds">'</span>.vscroller<span class="pl-pds">'</span></span>).vscroller({
+
+<span class="pl-c">// enable jQuery mousewheel support</span>
+mousewheel<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+
+<span class="pl-c">// extra easing function</span>
+easing<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>linear<span class="pl-pds">'</span></span>,
+
+<span class="pl-c">// mousewheel and keyboard arrows offset pixel count</span>
+scrollRate<span class="pl-k">:</span> <span class="pl-c1">15</span>,
+
+<span class="pl-c">// animation duration</span>
+animationDuration<span class="pl-k">:</span> <span class="pl-c1">400</span>
+
+});</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nxeed/VScroller">Vscroller</a> is maintained by <a href="https://github.com/nxeed">nxeed</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
