@@ -139,12 +139,20 @@ if (typeof Object.create !== "function") {
             });
 
             this.$scroll.bind('keypress.vscroller', function (e) {
-                var jump = base.options.scrollRate;
+                if (e.keyCode < 38 && e.keyCode > 40) {
+                    return;
+                }
 
+                var jump = base.options.scrollRate;
+                
                 if (e.keyCode === 38) {
                     base.scrollPos = base.scrollPos - jump;
                 } else if (e.keyCode === 40) {
                     base.scrollPos = base.scrollPos + jump;
+                }
+
+                if (base.redraw()) {
+                    e.preventDefault();
                 }
                 base.redraw();
             });
