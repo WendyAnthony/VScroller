@@ -1,5 +1,5 @@
 /*
- * jQuery VScroller v1.1
+ * jQuery VScroller v1.2
  * Created by Nxeed | https://github.com/nxeed
  */
 
